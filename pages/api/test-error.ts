@@ -5,6 +5,6 @@ export default function handler(req: NextRequest, res: NextResponse) {
         throw new Error("Errore di test")
         return NextResponse.json({successMsg: "ok nice!"});
     } catch (error) {
-        return NextResponse.json({errorMsg:"msg di test err"}, {status: 500});
+        return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
     }
 }
