@@ -20,6 +20,13 @@ const MyExpertise = () => {
                 }}
                 className="px-2 md:px-8 text-red-500 border-2 border-solid rounded py-2">{"Test error"}</button>
             </div>
+            <div>
+                <button
+                onClick={()=>{
+                    axios.post("api/test-success", {data:{page:"success"}})
+                }}
+                className="px-2 md:px-8 text-green-500 border-2 border-solid rounded py-2">{"Test error"}</button>
+            </div>
             <div className="grid justify items-center grid-flow-row md:grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-4 px-2 md:px-8 " >
 
                 {

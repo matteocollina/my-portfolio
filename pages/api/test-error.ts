@@ -1,10 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default function handler(req: NextRequest, res: NextResponse) {
+export default function handler(req, res) {
     try {
         throw new Error("Errore di test")
-        return NextResponse.json({successMsg: "ok nice!"});
+        return res.status(200).json({});
     } catch (error) {
-        return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
+        return res.status(500).json({message:"msg di test err"});
     }
 }
